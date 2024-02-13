@@ -1,0 +1,40 @@
+.ambient-video {
+  --ambient-video-aspect-ratio: 16/9;
+  --ambient-video-button-width: 2.5rem;
+  --ambient-video-button-height: 2.5rem;
+  --ambient-video-idle-bg-color: #333;
+  background-color: var(--ambient-video-idle-bg-color);
+}
+
+.ambient-video__media {
+  aspect-ratio: var(--ambient-video-aspect-ratio);
+  height: auto;
+  overflow: hidden;
+}
+
+.ambient-video__video {
+  aspect-ratio: var(--ambient-video-aspect-ratio);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.ambient-video__poster {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ambient-video__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ambient-video__control-btn {
+  display: block;
+  width: var(--ambient-video-button-width);
+  height: var(--ambient-video-button-height);
+}/*# sourceMappingURL=ambient-video.css.map */
