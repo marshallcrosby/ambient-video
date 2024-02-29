@@ -4,12 +4,21 @@
     --ambient-video-button-height: 2.5rem;
     --ambient-video-idle-bg-color: #333;
     background-color: var(--ambient-video-idle-bg-color);
+    position: relative;
 }
 
 .ambient-video__media {
     aspect-ratio: var(--ambient-video-aspect-ratio);
     height: auto;
     overflow: hidden;
+
+    &:has(.ambient-video__video) {
+        .ambient-video__poster {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 
 .ambient-video__video {
@@ -18,18 +27,22 @@
     left: 0;
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .ambient-video__poster {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 0;
 }
 
 .ambient-video__controls {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 .ambient-video__control-btn {
